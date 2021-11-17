@@ -1,0 +1,137 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: #212121;
+  background: #fff;
+  border-color: #bdbdbd;
+}
+
+body {
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: fit-content;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow;
+  padding: 4px 16px;
+  font-size: 0.8em;
+  border-radius: 2px;
+}
+
+button:hover,
+button:active,
+button:focus {
+  color: #d1c4e9;
+  background-color: #673ab7;
+}
+
+.main {
+  padding: 16px;
+}
+
+.custom-message div {
+  margin-bottom: 8px;
+}
+
+.custom-message input {
+  min-width: 200px;
+  margin-bottom: 8px;
+}
+
+.dialog-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pop-up {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pop-up.show {
+  display: flex;
+  padding: 0.8rem;
+  animation: 0.4s ease-in popupshow;
+}
+
+.dialog-card {
+  background-color: #eee;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  padding: 0.8rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 85);
+  border-radius: 4px;
+  margin: 2% auto;
+  text-align: center;
+  justify-self: center;
+  width: 400px;
+  height: 200px;
+  position: relative;
+  animation: 0.4s ease-in popupformshow;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-card * {
+  background-color: #eee;
+}
+
+.dialog-card .button {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow;
+  padding: 4px 16px;
+  font-size: 0.8em;
+  border-radius: 2px;
+  width: 80%;
+  font-size: 1.2em;
+  padding: 8px;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  margin-bottom: 12px;
+  top: 4px;
+  right: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
