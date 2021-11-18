@@ -1,0 +1,35 @@
+name: Linter
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  linter:
+    name: Linter
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+      - name: Setup Linter
+        run: |
+          yarn install
+      - name: Linter Report
+        run: yarn lint:check
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+      - name: Setup Prettier
+        run: |
+          yarn install
+      - name: Prettier Report
+        run: yarn format:check

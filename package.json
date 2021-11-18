@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "eslint": "^8.0.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "2.4.1",
+    "stylelint": "^14.0.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-prettier": "^1.2.0"
+  },
+  "scripts": {
+    "format": "npx prettier  --write \"**/*.{css,html,json,md.json,yaml,yml,js}\"",
+    "format:check": "npx prettier  --check \"**/*.{css,html,json,md.json,yaml,yml,js}\"",
+    "lint": "npx eslint -c .eslintrc.json \"**/*.js\" --fix && npx stylelint \"**/*.css\" --fix",
+    "lint:check": "npx eslint -c .eslintrc.json \"**/*.js\" && npx stylelint \"**/*.css\""
+  }
+}

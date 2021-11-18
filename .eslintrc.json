@@ -1,0 +1,13 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "requireConfigFile": false
+  },
+  "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier"]
+}
